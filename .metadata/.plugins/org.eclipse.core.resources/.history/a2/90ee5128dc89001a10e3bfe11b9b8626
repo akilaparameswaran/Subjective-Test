@@ -1,0 +1,21 @@
+package Sample;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class MecuryTours {
+
+	public static void main(String[] args) 
+	{
+		//System.setProperty("webdriver.chrome.diver", "C:\\Users\\akilap\\eclipse-workspace\\Selenium\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://newtours.demoaut.com/");
+		driver.findElement(By.linkText("REGISTER")).click();
+		driver.findElement(By.name("firstName")).sendKeys("Akila");
+		
+
+	}
+
+}
